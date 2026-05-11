@@ -24,6 +24,7 @@
         "phpstan/phpstan-deprecation-rules": "^2.0",
         "phpstan/phpstan-strict-rules": "^2.0",
         "phpunit/phpunit": "^12.5.12",
+        "qossmic/deptrac": "^2.0",
         "rector/rector": "^2.4"
     },
     "autoload": {
@@ -57,10 +58,12 @@
         "cs:fix": "@php vendor/bin/php-cs-fixer fix",
         "rector": "@php vendor/bin/rector process --dry-run",
         "rector:fix": "@php vendor/bin/rector process",
+        "arch": "@php vendor/bin/deptrac analyse --no-progress",
         "ci": [
             "@cs",
             "@stan",
             "@rector",
+            "@arch",
             "@test"
         ],
         "post-autoload-dump": [
