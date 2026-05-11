@@ -1,0 +1,15 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+    - vendor/phpstan/phpstan-deprecation-rules/rules.neon
+
+parameters:
+    level: max
+    paths:
+        - app
+        - src
+        - database
+        - routes
+    excludePaths:
+        - bootstrap/cache/*
+    treatPhpDocTypesAsCertain: false
