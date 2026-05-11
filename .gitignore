@@ -1,0 +1,56 @@
+# PHP / Composer
+/vendor/
+composer.phar
+.phpunit.result.cache
+.phpunit.cache/
+.php-cs-fixer.cache
+.phpstan.cache/
+.rector.cache/
+infection.log
+
+# Laravel
+/node_modules/
+/public/build/
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/storage/logs/*.log
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+.env
+.env.backup
+.env.production
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea/
+/.vscode/
+/.zed/
+/.nova/
+
+# Docker / runtime
+docker-compose.override.yml
+.docker/data/
+
+# Bench artefacts (raw outputs — keep summarised .md files)
+/docs/benchmarks/raw/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor / agent caches
+.claude/
+*.swp
+*.swo
+
+# Internal working notes — not for public repo
+/CLAUDE.md
+/docs/
+/.github/pull_request_template.md
+/.github/CODEOWNERS
+/.github/ISSUE_TEMPLATE/
