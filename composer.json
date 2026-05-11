@@ -10,6 +10,7 @@
         "laravel/tinker": "^3.0"
     },
     "require-dev": {
+        "driftingly/rector-laravel": "^2.3",
         "fakerphp/faker": "^1.23",
         "friendsofphp/php-cs-fixer": "^3.95",
         "larastan/larastan": "^3.9",
@@ -21,7 +22,8 @@
         "phpstan/phpstan": "^2.1",
         "phpstan/phpstan-deprecation-rules": "^2.0",
         "phpstan/phpstan-strict-rules": "^2.0",
-        "phpunit/phpunit": "^12.5.12"
+        "phpunit/phpunit": "^12.5.12",
+        "rector/rector": "^2.4"
     },
     "autoload": {
         "psr-4": {

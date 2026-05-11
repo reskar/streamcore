@@ -12,7 +12,7 @@ arch('application has no laravel dependencies')
 
 arch('domain has no eloquent dependencies')
     ->expect('Src\Domain')
-    ->not->toUse('Illuminate\Database\Eloquent\Model');
+    ->not->toUse(\Illuminate\Database\Eloquent\Model::class);
 
 arch('classes in src are strict')
     ->expect('Src')
