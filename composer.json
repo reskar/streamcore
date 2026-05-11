@@ -49,6 +49,19 @@
             "@php artisan config:clear --ansi",
             "@php artisan test"
         ],
+        "test:unit": "@php vendor/bin/pest --testsuite=Unit",
+        "test:arch": "@php vendor/bin/pest --testsuite=Arch",
+        "stan": "@php vendor/bin/phpstan analyse --memory-limit=512M",
+        "cs": "@php vendor/bin/php-cs-fixer fix --dry-run --diff",
+        "cs:fix": "@php vendor/bin/php-cs-fixer fix",
+        "rector": "@php vendor/bin/rector process --dry-run",
+        "rector:fix": "@php vendor/bin/rector process",
+        "ci": [
+            "@cs",
+            "@stan",
+            "@rector",
+            "@test"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
