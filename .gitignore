@@ -6,6 +6,7 @@ composer.phar
 .php-cs-fixer.cache
 .phpstan.cache/
 .rector.cache/
+.deptrac.cache
 infection.log
 
 # Laravel
