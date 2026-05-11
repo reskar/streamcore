@@ -51,7 +51,9 @@ Thumbs.db
 
 # Internal working notes — not for public repo
 /CLAUDE.md
-/docs/
+/docs/PLAN.md
+/docs/DEV_WORKFLOW.md
+/docs/LOAD_TESTING.md
 /.github/pull_request_template.md
 /.github/CODEOWNERS
 /.github/ISSUE_TEMPLATE/
