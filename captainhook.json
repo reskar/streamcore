@@ -1,0 +1,28 @@
+{
+    "pre-commit": {
+        "enabled": true,
+        "actions": [
+            {
+                "action": "vendor/bin/php-cs-fixer fix --dry-run --diff {$STAGED_FILES|of-type:php}",
+                "conditions": [
+                    {
+                        "exec": "\\CaptainHook\\App\\Hook\\Condition\\FileStaged\\OfType",
+                        "args": ["php"]
+                    }
+                ]
+            }
+        ]
+    },
+    "commit-msg": {
+        "enabled": true,
+        "actions": [
+            {
+                "action": "\\CaptainHook\\App\\Hook\\Message\\Action\\Regex",
+                "options": {
+                    "regex": "#^(feat|fix|refactor|perf|test|docs|chore|style|build|ci|revert)(\\([a-z0-9-]+\\))?!?: .{1,80}$#",
+                    "error": "Commit must follow Conventional Commits: type(scope): description (max 80 chars subject)"
+                }
+            }
+        ]
+    }
+}
